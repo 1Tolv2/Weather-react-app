@@ -1,15 +1,39 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { weatherContext } from "../App";
-import CardThumbnail from "./Thumbnail"
-import SunIcon from "./SunIcon";
+import CardThumbnail from "./Thumbnail";
+import WeatherIcon from "./WeatherIcon";
+
+const weatherBackground = {
+  day: { good: "#adcbff, #5c87ff", bad: "#cdd6e5, #7d93cf" },
+  night: { good: "#002f80, #00144d", bad: "#212d40, #16203c" },
+};
+function dayOrNight(sunrise, sunset, currentTime) {
+  return currentTime >= sunrise && currentTime <= sunset
+    ? "day"
+    : currentTime < sunrise
+    ? "night"
+    : currentTime > sunset
+    ? "night"
+    : "day";
+}
+function goodOrBadWeather(weatherCode) {
+  const goodWeatherCodes = [500, 501, 600, 601, 701, 800, 801, 802];
+  return goodWeatherCodes.includes(weatherCode) ? "good" : "bad";
+}
 
 const StyledCard = styled.div`
   height: 100%;
   width: 300px;
   margin: auto;
   z-index: 1;
-  background-image: linear-gradient(#212d40, #16203c);
+  background-image: linear-gradient(
+    ${(props) =>
+      props.data &&
+      weatherBackground[
+        dayOrNight(props.data.sunrise, props.data.sunset, props.data.dt)
+      ][goodOrBadWeather(props.data.id)]}
+  );
   box-shadow: 0px 0px 20px #121212;
   hr {
     margin: 0 20px;
@@ -17,7 +41,7 @@ const StyledCard = styled.div`
   }
 `;
 
-const StyledText = styled.h2`
+const StyledBigText = styled.h2`
   position: absolute;
   top: 5%;
   left: 50%;
@@ -25,31 +49,41 @@ const StyledText = styled.h2`
   color: white;
   transform: translate(-50%, 0);
   text-shadow: 0px 0px 10px grey;
-  &::after {
+  &.degree::after {
     position: absolute;
+    top: 5px;
+    left: 32px;
+    font-size: 0.6em;
     content: "°";
   }
 `;
-const StyledIcon = styled.img`
+
+const StyledSmallText = styled.span`
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
   transform: translate(-50%, 0);
+  text-shadow: 0px 0px 10px grey;
 `;
 
 export default function CardFront() {
   const { weatherData } = useContext(weatherContext);
-  console.log(weatherData.current.dt)
-  const date = new Date(weatherData.current.dt*1000)
-  console.log(date.getHours())
+
+  const date = new Date(weatherData.current.dt * 1000);
+
+  console.log(date.getHours());
+
   return (
-    <StyledCard>
+    <StyledCard data={weatherData.current}>
       <CardThumbnail>
-        <SunIcon></SunIcon>
-        <StyledText>{Math.round(weatherData.current.temp)}</StyledText>
-        <StyledIcon
-          src={`http://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`}
-        />
+        <WeatherIcon></WeatherIcon>
+        <StyledBigText className="degree">
+          {Math.round(weatherData.current.temp)}
+        </StyledBigText>
+        <StyledSmallText>{weatherData.current.weather[0].main}</StyledSmallText>
       </CardThumbnail>
       <hr />
     </StyledCard>
