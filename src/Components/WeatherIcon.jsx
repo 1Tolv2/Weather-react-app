@@ -35,6 +35,6 @@ const IconContainer = styled.div`
     z-index: 4;
   }
 `;
-export default function SunIcon() {
+export default function WeatherIcon() {
   return <IconContainer></IconContainer>;
 }
