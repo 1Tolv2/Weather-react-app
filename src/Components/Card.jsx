@@ -70,7 +70,7 @@ const StyledSmallText = styled.span`
   text-shadow: 0px 0px 10px grey;
 `;
 
-export default function CardFront() {
+export default function Card() {
   const { weatherData } = useContext(weatherContext);
 
   const currentDate = new Date(weatherData.current.dt * 1000);
