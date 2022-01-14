@@ -27,16 +27,14 @@ function goodOrBadWeather(weatherCode) {
 const StyledCard = styled.div`
   height: 100%;
   width: 300px;
-  min-height: 530px;
+height: fit-content;
   margin: auto;
   z-index: 1;
-  background-image: linear-gradient(
-    ${(props) =>
-      props.data &&
-      weatherBackground[
-        dayOrNight(props.data.sunrise, props.data.sunset, props.data.dt)
-      ][goodOrBadWeather(props.data.id)]}
-  );
+  background-image: linear-gradient(${(props) =>
+    props.data &&
+    weatherBackground[
+      dayOrNight(props.data.sunrise, props.data.sunset, props.data.dt)
+    ][goodOrBadWeather(props.data.weather[0].id)]});
   box-shadow: 0px 0px 20px #121212;
   hr {
     margin: 0 20px;
@@ -76,11 +74,8 @@ export default function CardFront() {
   const { weatherData } = useContext(weatherContext);
 
   const currentDate = new Date(weatherData.current.dt * 1000);
-
   console.log(currentDate);
   console.log(weatherData);
-
-  // console.log(currentDate.getHours());
 
   return (
     <StyledCard data={weatherData.current}>
@@ -91,7 +86,7 @@ export default function CardFront() {
         </StyledBigText>
         <StyledSmallText>{weatherData.current.weather[0].main}</StyledSmallText>
       </CardThumbnail>
-      <hr />
+      {/* <hr /> */}
       <CardInformation>
         <HourlyForecast></HourlyForecast>
       </CardInformation>
