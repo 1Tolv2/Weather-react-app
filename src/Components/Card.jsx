@@ -5,6 +5,7 @@ import CardThumbnail from "./Thumbnail";
 import WeatherIcon from "./WeatherIcon";
 import CardInformation from "./CardInformation";
 import HourlyForecast from "./HourlyForecast";
+import WeekDay from "./WeekDay";
 
 const weatherBackground = {
   day: { good: "#adcbff, #5c87ff", bad: "#cdd6e5, #7d93cf" },
@@ -27,14 +28,16 @@ function goodOrBadWeather(weatherCode) {
 const StyledCard = styled.div`
   height: 100%;
   width: 300px;
-height: fit-content;
+  height: fit-content;
   margin: auto;
   z-index: 1;
-  background-image: linear-gradient(${(props) =>
-    props.data &&
-    weatherBackground[
-      dayOrNight(props.data.sunrise, props.data.sunset, props.data.dt)
-    ][goodOrBadWeather(props.data.weather[0].id)]});
+  background-image: linear-gradient(
+    ${(props) =>
+      props.data &&
+      weatherBackground[
+        dayOrNight(props.data.sunrise, props.data.sunset, props.data.dt)
+      ][goodOrBadWeather(props.data.weather[0].id)]}
+  );
   box-shadow: 0px 0px 20px #121212;
   hr {
     margin: 0 20px;
@@ -42,14 +45,21 @@ height: fit-content;
   }
 `;
 
+const CenteredContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 10%;
+  margin: auto;
+`;
+
 const StyledBigText = styled.h2`
-  position: absolute;
-  top: 5%;
-  left: 50%;
+  position: relative;
   font-size: 4em;
   color: white;
-  transform: translate(-50%, 0);
   text-shadow: 0px 0px 10px grey;
+  margin-bottom: 10px;
   &.degree::after {
     position: absolute;
     top: 5px;
@@ -60,13 +70,10 @@ const StyledBigText = styled.h2`
 `;
 
 const StyledSmallText = styled.span`
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  font-size: 1.3em;
+  font-size: ${props => props.size};
   font-weight: bold;
   color: white;
-  transform: translate(-50%, 0);
+  margin: 3px 0;
   text-shadow: 0px 0px 10px grey;
 `;
 
@@ -81,12 +88,18 @@ export default function Card() {
     <StyledCard data={weatherData.current}>
       <CardThumbnail>
         <WeatherIcon></WeatherIcon>
-        <StyledBigText className="degree">
-          {Math.round(weatherData.current.temp)}
-        </StyledBigText>
-        <StyledSmallText>{weatherData.current.weather[0].main}</StyledSmallText>
+        <CenteredContainer>
+          <StyledBigText className="degree">
+            {Math.round(weatherData.current.temp)}
+          </StyledBigText>
+          <StyledSmallText size="1.3em">
+            {weatherData.current.weather[0].main}
+          </StyledSmallText>
+          <StyledSmallText size="0.9em">
+            <WeekDay />
+          </StyledSmallText>
+        </CenteredContainer>
       </CardThumbnail>
-      {/* <hr /> */}
       <CardInformation>
         <HourlyForecast></HourlyForecast>
       </CardInformation>
