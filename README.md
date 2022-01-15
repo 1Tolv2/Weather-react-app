@@ -27,6 +27,7 @@
 A small weather app displaying the current days weather.
 <div align="center">
 <img src="/public/screenshot-goodday.png" alt="App screenshot of clear day"/>
+<img src="/public/weather-app-icons-preview.png" alt="Weather icon preview" height="650px"/>
 </div>
 
 ## Built with
@@ -73,5 +74,5 @@ The page reloads as you make changes and save your code.
 
 Here are some links that I've found very helpful during the development and I would like to give credit to.
 
-* [Tutorila for creating svg icons in inkscape](https://www.youtube.com/channel/UCEQXp_fcqwPcqrzNtWJ1w9w)
+* [Tutorial for creating svg icons in inkscape](https://www.youtube.com/channel/UCEQXp_fcqwPcqrzNtWJ1w9w)
 * [README template](https://github.com/othneildrew/Best-README-Template)
