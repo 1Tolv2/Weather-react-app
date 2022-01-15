@@ -62,8 +62,6 @@ const StyledBigText = styled.h2`
   margin-bottom: 10px;
   &.degree::after {
     position: absolute;
-    top: 5px;
-    left: 32px;
     font-size: 0.6em;
     content: "°";
   }
