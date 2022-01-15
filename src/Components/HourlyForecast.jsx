@@ -42,17 +42,17 @@ const StyledListItem = styled.li`
   }
   p {
     margin: 0;
+    margin-right: 3px;
   }
   p.tableDegree::after{
-    position: absolute;
-    top: 2px;
-    left: 7px;
+    position: relative;
+    top: -3px;
     font-size: 0.7em;
     content: "°";
   }
   .smallIcon {
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
   }
 `;
 
@@ -70,10 +70,11 @@ export default function HourlyForecast() {
     if (i >= currentDate.getHours()) {
       hourList.push(
         <StyledListItem key={i} id={i} className="forecast" alt={weatherData.hourly[hourToCome].weather[0].main}>
-          <p className="tableDegree">{Math.round(weatherData.hourly[hourToCome].temp)} {weatherData.hourly[hourToCome].weather[0].main}</p>
+          <p className="tableDegree">{Math.round(weatherData.hourly[hourToCome].temp)}</p> 
+          <p>{weatherData.hourly[hourToCome].weather[0].main}</p>
           <img
             className="smallIcon"
-            src={`http://openweathermap.org/img/wn/${weatherData.hourly[hourToCome].weather[0].icon}@2x.png`}
+            src={`/${weatherData.hourly[hourToCome].weather[0].icon}.svg`}
           />
         </StyledListItem>
       );
