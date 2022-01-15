@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="285"
+   height="450"
+   viewBox="0 0 75.406261 119.06251"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="01n.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.8762222"
+     inkscape:cx="142.08725"
+     inkscape:cy="188.87903"
+     inkscape:window-width="1530"
+     inkscape:window-height="1011"
+     inkscape:window-x="-7"
+     inkscape:window-y="1"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:object-nodes="true"
+     units="px"
+     width="50px">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2013" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1359"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="ellipse24587-3"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.84792;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 36.189534,36.251412 A 23.290029,22.513694 0 0 0 14.106689,58.72155 23.290029,22.513694 0 0 0 37.39652,81.235306 23.290029,22.513694 0 0 0 60.247934,62.990725 18.416662,17.802772 0 0 1 49.482873,66.362747 18.416662,17.802772 0 0 1 31.066077,48.559604 18.416662,17.802772 0 0 1 36.189534,36.251412 Z" />
+  </g>
+</svg>
