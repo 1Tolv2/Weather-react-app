@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 // import SideCard from "../Components/SideCard";
 import { weatherContext } from "../App";
-import CardFront from "../Components/CardFront";
+import Card from "../Components/Card";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -24,12 +24,13 @@ const Wrapper = styled.div`
 
 export default function StartPage() {
 const {weatherData} = useContext(weatherContext)
+
 //   console.log(weatherData);
   return (<>
     <Wrapper>
       {weatherData && (
         <>
-          <CardFront></CardFront>
+          <Card></Card>
         </>
       )}
     </Wrapper>
