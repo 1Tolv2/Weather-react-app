@@ -25,7 +25,7 @@
 ## About The Project
 
 A small weather app displaying the current days weather.
-<img src="public\wa-screenshot-goodday.PNG" alt="Screenshot of the clear day" width="80" height="80">
+<img src="/public/wa-screenshot-goodday.PNG" alt="Screenshot of the clear day" width="80" height="80">
 
 ## Built with
 * [React.js](https://reactjs.org/)
