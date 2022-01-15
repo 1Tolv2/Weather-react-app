@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/1Tolv2/weather-app">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" width="80" height="80">
+  </a>
 
-## Available Scripts
+<h3 align="center">Weather app</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    Built in React using the OpenWeather API
+    <br />
+    <a href="https://github.com/1Tolv2/weather-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/1Tolv2/weather-app/issues">Propose Feature</a>
+	  ·
+    <a href="https://github.com/1Tolv2/weather-app/issues">Report Bug</a>
+  </p>
+</div>
 
-### `npm start`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A small weather app displaying the current days weather.
+<img src="public\wa-screenshot-goodday.PNG" alt="Screenshot of the clear day" width="80" height="80">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built with
+* [React.js](https://reactjs.org/)
+* [OpenWeather API](https://openweathermap.org/)
 
-### `npm test`
+<!-- GETTING STARTED -->
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running follow the information down below.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These are the softwares that I have used during the building of this project
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+  * Styled Components (installed locally in the app)
+  ```sh
+  npm install styled-components
+  ```
+### Installation
+ 
+1. First start cloning the repo by entering the below command in your terminal.
+   ```sh
+   git clone https://github.com/1Tolv2/FrontEnd3-CRM.git
+   ```
+2. After cloning the repository, cd in to the new folder and type the below command.
+   ```sh
+   npm install
+   ```
+3. Type the following command to begin development mode.
+   ```sh
+   npm start
+   ```
+4. Open <a href="http://http://localhost:3000/">http://http://localhost:3000/</a> in your prefered browser.
+The page reloads as you make changes and save your code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Here are some links that I've found very helpful during the development and I would like to give credit to.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Tutorila for creating svg icons in inkscape](https://www.youtube.com/channel/UCEQXp_fcqwPcqrzNtWJ1w9w)
+* [README template](https://github.com/othneildrew/Best-README-Template)
