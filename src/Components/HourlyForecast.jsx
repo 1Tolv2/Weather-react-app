@@ -3,7 +3,7 @@ import { weatherContext } from "../App";
 import styled from "styled-components";
 
 const StyledList = styled.ul`
-position: relative;
+  position: relative;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: repeat(12, auto);
@@ -20,7 +20,7 @@ position: relative;
     padding: 10px 0;
     border-radius: 5px;
     background-color: white;
-opacity: 0.2;
+    opacity: 0.2;
     z-index: 0;
   }
 `;
@@ -44,7 +44,7 @@ const StyledListItem = styled.li`
     margin: 0;
     margin-right: 3px;
   }
-  p.tableDegree::after{
+  p.tableDegree::after {
     position: relative;
     top: -3px;
     font-size: 0.7em;
@@ -62,15 +62,21 @@ export default function HourlyForecast() {
   const currentDate = new Date(weatherData.current.dt * 1000);
 
   /* To-do
-    1. Make own weather icons
-    2. Add old data of default greyish data for the hours past? */
-    const hourList = [];
-    let hourToCome = 0; 
+    1. Add old data of default greyish data for the hours past? */
+  const hourList = [];
+  let hourToCome = 0;
   for (let i = 0; i < 24; i++) {
     if (i >= currentDate.getHours()) {
       hourList.push(
-        <StyledListItem key={i} id={i} className="forecast" alt={weatherData.hourly[hourToCome].weather[0].main}>
-          <p className="tableDegree">{Math.round(weatherData.hourly[hourToCome].temp)}</p> 
+        <StyledListItem
+          key={i}
+          id={i}
+          className="forecast"
+          alt={weatherData.hourly[hourToCome].weather[0].main}
+        >
+          <p className="tableDegree">
+            {Math.round(weatherData.hourly[hourToCome].temp)}
+          </p>
           <p>{weatherData.hourly[hourToCome].weather[0].main}</p>
           <img
             className="smallIcon"
