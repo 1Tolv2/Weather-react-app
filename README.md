@@ -12,12 +12,12 @@
   <p align="center">
     Built in React using the OpenWeather API
     <br />
-    <a href="https://github.com/1Tolv2/weather-app"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/1Tolv2/Weather-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/1Tolv2/weather-app/issues">Propose Feature</a>
+    <a href="https://github.com/1Tolv2/Weather-app/issues">Propose Feature</a>
 	  ·
-    <a href="https://github.com/1Tolv2/weather-app/issues">Report Bug</a>
+    <a href="https://github.com/1Tolv2/Weather-app/issues">Report Bug</a>
   </p>
 </div>
 
