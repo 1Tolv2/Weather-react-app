@@ -27,7 +27,7 @@
 A small weather app displaying the current days weather.
 <div align="center">
 <img src="/public/screenshot-goodday.png" alt="App screenshot druing day" height="600px"/>
-<img src="/public/screenshot-goodnight.png" alt="App screenshot during night" height="600px"/>
+<img src="/public/screenshot-goodnight.PNG" alt="App screenshot during night" height="600px"/>
 <img src="/public/weather-app-icons-preview.png" alt="Weather icon preview" height="600px"/>
 </div>
 
