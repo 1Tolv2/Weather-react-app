@@ -4,8 +4,10 @@ import { weatherContext } from "../App";
 import CardThumbnail from "./Thumbnail";
 import WeatherIcon from "./WeatherIcon";
 import CardInformation from "./CardInformation";
-import HourlyForecast from "./HourlyForecast";
 import WeekDay from "./WeekDay";
+import Text from "./Text";
+import List from "./List";
+import ForecastListItem from "./ForecastListItem";
 
 const weatherBackground = {
   day: { good: "#adcbff, #5c87ff", bad: "#cdd6e5, #7d93cf" },
@@ -39,10 +41,6 @@ const StyledCard = styled.div`
       ][goodOrBadWeather(props.data.weather[0].id)]}
   );
   box-shadow: 0px 0px 20px #121212;
-  hr {
-    margin: 0 20px;
-    opacity: 0.5;
-  }
 `;
 
 const CenteredContainer = styled.div`
@@ -52,27 +50,6 @@ const CenteredContainer = styled.div`
   flex-wrap: wrap;
   width: 10%;
   margin: auto;
-`;
-
-const StyledBigText = styled.h2`
-  position: relative;
-  font-size: 4em;
-  color: white;
-  text-shadow: 0px 0px 10px grey;
-  margin-bottom: 10px;
-  &.degree::after {
-    position: absolute;
-    font-size: 0.6em;
-    content: "°";
-  }
-`;
-
-const StyledSmallText = styled.span`
-  font-size: ${props => props.size};
-  font-weight: bold;
-  color: white;
-  margin: 3px 0;
-  text-shadow: 0px 0px 10px grey;
 `;
 
 export default function Card() {
@@ -87,19 +64,19 @@ export default function Card() {
       <CardThumbnail>
         <WeatherIcon></WeatherIcon>
         <CenteredContainer>
-          <StyledBigText className="degree">
+          <Text Big className="degree">
             {Math.round(weatherData.current.temp)}
-          </StyledBigText>
-          <StyledSmallText size="1.3em">
+          </Text>
+          <Text size="1.3em">
             {weatherData.current.weather[0].main}
-          </StyledSmallText>
-          <StyledSmallText size="0.9em">
+          </Text>
+          <Text size="0.9em">
             <WeekDay />
-          </StyledSmallText>
+          </Text>
         </CenteredContainer>
       </CardThumbnail>
       <CardInformation>
-        <HourlyForecast></HourlyForecast>
+        <List><ForecastListItem/></List>
       </CardInformation>
     </StyledCard>
   );
