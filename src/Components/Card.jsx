@@ -62,7 +62,7 @@ export default function Card() {
   return (
     <StyledCard data={weatherData.current}>
       <CardThumbnail>
-        <WeatherIcon></WeatherIcon>
+        <WeatherIcon timeOfDay={dayOrNight(weatherData.current.sunrise, weatherData.current.sunset, weatherData.current.dt)}></WeatherIcon>
         <CenteredContainer>
           <Text Big className="degree">
             {Math.round(weatherData.current.temp)}
