@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function WeekDay() {
+export default function WeekDay(props) {
     const dayList = [
         "MONDAY",
         "TUESDAY",
@@ -13,7 +13,7 @@ export default function WeekDay() {
       const day = new Date();
     return (
         <>
-            {dayList[day.getDay() - 1]}
+            {dayList[day.getDay()]}
         </>
     )
 }
