@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function WeekDay(props) {
+export default function WeekDay() {
     const dayList = [
         "MONDAY",
         "TUESDAY",
