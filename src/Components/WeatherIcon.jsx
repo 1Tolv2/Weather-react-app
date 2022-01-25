@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
+import { dayOrNight } from "./WeatherBackground";
+import { weatherContext } from "../App";
 
 /*To-do:
 1. Add classes for the sun, so during night it's a moon
@@ -39,5 +41,8 @@ const IconContainer = styled.div`
   }
 `;
 export default function WeatherIcon(props) {
-  return <IconContainer {...props}></IconContainer>;
+  const { weatherData } = useContext(weatherContext);
+
+console.log()
+  return <IconContainer timeOfDay={dayOrNight(props.data.sunrise, props.data.sunset, props.data.dt)}></IconContainer>;
 }
