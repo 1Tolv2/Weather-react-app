@@ -10,6 +10,7 @@ const IconContainer = styled.div`
   position: relative;
   width: 40px;
   height: 40px;
+  background-color: ${props => props.timeOfDay === "day" ? "#ffe770" : "#fff6c2"};
   border-radius: 50px;
   z-index: 5;
   &::before {
@@ -69,7 +70,6 @@ const IconContainer = styled.div`
       return css`
       top: 50px;
       left: 50px;
-      background-color: ${props => props.timeOfDay === "day" ? "#ffe770" : "#fff6c2"};
       &::before{
         background-color: ${props => props.timeOfDay === "day" ? "#ffe770" : "#fff6c2"};
       }
