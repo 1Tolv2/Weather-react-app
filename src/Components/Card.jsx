@@ -31,13 +31,10 @@ const CenteredContainer = styled.div`
 
 export default function Card() {
   const { weatherData } = useContext(weatherContext);
-  const hour = new Date(1643094840 * 1000);
-  console.log(hour)
-  console.log(hour.getHours());
-
 
   const currentDate = new Date(weatherData.current.dt * 1000);
   console.log(currentDate.getHours())
+  console.log(weatherData)
   return (
     <StyledCard data={weatherData.current}>
       <CardThumbnail>

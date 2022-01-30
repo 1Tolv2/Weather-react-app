@@ -11,6 +11,7 @@ function dayOrNight(sunrise, sunset, currentTime) {
   const hourOfSunrise = new Date(sunrise * 1000).getHours();
   const hourOfSunset = new Date(sunset * 1000).getHours();
   const hourOfDay = new Date(currentTime * 1000).getHours();
+  
   if (hourOfDay === hourOfSunrise) {
     return "sunrise";
   } else if (hourOfDay > hourOfSunrise && hourOfDay < hourOfSunset) {

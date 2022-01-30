@@ -61,10 +61,11 @@ export default function HourlyForecast() {
 
   const currentDate = new Date(weatherData.current.dt * 1000);
 
-  /* To-do
-    1. Add old data of default greyish data for the hours past? */
   const hourList = [];
   let hourToCome = 0;
+
+  // Checks the time to render the forecast on the correct hour.
+  // hourToCome is the index we use in the array to get the correct data.
   for (let i = 0; i < 24; i++) {
     if (i >= currentDate.getHours()) {
       hourList.push(
