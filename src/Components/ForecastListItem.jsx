@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
-import styled from 'styled-components';
-import { weatherContext } from '../App';
+import React, { useContext } from "react";
+import styled from "styled-components";
+import { weatherContext } from "../App";
 
 const StyledListItem = styled.li`
   display: flex;
@@ -35,38 +35,46 @@ const StyledListItem = styled.li`
 `;
 
 export default function ForecastListItem() {
-const { weatherData } = useContext(weatherContext);
+  const { weatherData } = useContext(weatherContext);
 
   const currentDate = new Date(weatherData.current.dt * 1000);
 
-  /* To-do
-    1. Add old data of default greyish data for the hours past? */
+// Places the coming 24 hours forecast data on the 24 slots.
+// The greyed out is tomorrows data and becomes white when it's the current days data
   const hourList = [];
-  let hourToCome = 0;
   for (let i = 0; i < 24; i++) {
-    if (i >= currentDate.getHours()) {
-      hourList.push(
+    const hourlyData = new Date(weatherData.hourly[i].dt * 1000);
+    console.log(hourlyData.getHours());
+    if (hourlyData.getHours() >= currentDate.getHours()) {
+      hourList[hourlyData.getHours()] = (
         <StyledListItem
-          key={i}
-          id={i}
+          key={hourlyData.getHours()}
+          id={hourlyData.getHours()}
           className="forecast"
         >
           <p className="tableDegree">
-            {Math.round(weatherData.hourly[hourToCome].temp)}
+            {Math.round(weatherData.hourly[i].temp)}
           </p>
-          <p>{weatherData.hourly[hourToCome].weather[0].main}</p>
+          <p>{weatherData.hourly[i].weather[0].main}</p>
           <img
             className="smallIcon"
-            src={`/${weatherData.hourly[hourToCome].weather[0].icon}.svg`}
-            alt={weatherData.hourly[hourToCome].weather[0].main}
+            src={`/${weatherData.hourly[i].weather[0].icon}.svg`}
+            alt={weatherData.hourly[i].weather[0].main}
           />
         </StyledListItem>
       );
-      hourToCome++;
     } else {
-      hourList.push(
-        <StyledListItem key={i} id={i}>
-          <br />
+      hourList[hourlyData.getHours()] = (
+        <StyledListItem key={hourlyData.getHours()} id={hourlyData.getHours()}>
+          <p className="tableDegree">
+            {Math.round(weatherData.hourly[i].temp)}
+          </p>
+          <p>{weatherData.hourly[i].weather[0].main}</p>
+          <img
+            className="smallIcon"
+            src={`/${weatherData.hourly[i].weather[0].icon}.svg`}
+            alt={weatherData.hourly[i].weather[0].main}
+          />
         </StyledListItem>
       );
     }
