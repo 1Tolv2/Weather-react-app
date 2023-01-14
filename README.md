@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/1Tolv2/weather-app">
+  <a href="https://github.com/1Tolv2/weather-react-app">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -12,12 +12,12 @@
   <p align="center">
     Built in React using the OpenWeather API
     <br />
-    <a href="https://github.com/1Tolv2/Weather-app"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/1Tolv2/Weather-react-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/1Tolv2/Weather-app/issues">Propose Feature</a>
+    <a href="https://github.com/1Tolv2/Weather-react-app/issues">Propose Feature</a>
 	  ·
-    <a href="https://github.com/1Tolv2/Weather-app/issues">Report Bug</a>
+    <a href="https://github.com/1Tolv2/Weather-react-app/issues">Report Bug</a>
   </p>
 </div>
 
